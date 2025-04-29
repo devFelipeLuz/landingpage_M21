@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./src/styles/main.scss">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="icon" href="src/images/capAmerica_logo.png" type="image/png">
 </head>
 
 <body>
@@ -18,108 +19,286 @@
         <img src="./src/images/capAmerica_logo.png" alt="Escudo do Capitão America">
         <nav class="header__nav">
             <ul class="header__nav__list">
-                <li class="header__nav__list__item">
-                    <a href="#about">O herói</a>
+                <li class="header__nav__list__item title-small btn btn--dark">
+                    <a href="#about">sobre</a>
                 </li>
-                <li class="header__nav__list__item">
-                    <a href="#">Filmes</a>
+                <li class="header__nav__list__item title-small btn btn--dark">
+                    <a href="#movies">Filmes</a>
                 </li>
-                <li class="header__nav__list__item">
-                    <a href="#">Onde assistir?</a>
+                <li class="header__nav__list__item title-small btn btn--dark">
+                    <a href="#watch">Assistir</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>Sobre o herói</h2>
-        <div>
-            <img src="src/images/Steve_Rogers.png" alt="">
-            <h3>Steve Rogers</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quo ipsam praesentium nostrum nemo
-                architecto vero maiores officia dolorem expedita labore non doloribus ea dolorum, ab, excepturi itaque
-                quisquam in?
-            </p>
-            <img src="src/images/Sam_Wilson.png" alt="">
-            <h3>Sam Wilson</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quo ipsam praesentium nostrum nemo
-                architecto vero maiores officia dolorem expedita labore non doloribus ea dolorum, ab, excepturi itaque
-                quisquam in?
+    <section class="about" id="about">
+        <img src="src/images/Steve_Rogers.png" alt="Qualquer coisa">
+        <div class="about__text_container">
+            <h3 class="title">Steve Rogers</h3>
+            <p class="text--big">
+                Capitão América é um super-herói de histórias em quadrinhos americanos publicado pela Marvel Comics.
+                Criado por Joe Simon e Jack Kirby, o primeiro personagem apareceu em Captain America Comics # 1 (março
+                de 1941) da Timely Comics, antecessora da Marvel Comics. Capitão América foi concebido como um
+                super-herói patriótico, vestindo um traje inspirado na bandeira dos Estados Unidos, que lutou contra as
+                potências do Eixo na Segunda Guerra Mundial[1] e foi personagem mais popular da Timely Comics durante o
+                período da guerra. A popularidade dos super-heróis diminuiu após a guerra e os quadrinhos Capitão
+                América foram interrompidos em 1950,[2] com uma volta de curta duração em 1953. Em 1964, o personagem
+                foi reintroduzido como participante do Universo Marvel [3] A arma principal do personagem é um escudo
+                quase indestrutível, feito principalmente do metal fictício vibranium.
+                <br>
+                <br>
+                Vários personagens tiveram o codinome Capitão América, com o original e mais popular sendo Steve Rogers,
+                um jovem franzino que atinge o pico da perfeição humana após aplicar um soro experimental com o intuito
+                de ajudar os Estados Unidos contra as potências do Eixo. Perto do fim da Segunda Guerra, ficou preso no
+                gelo e sobreviveu em animação suspensa até que foi revivido nos dias atuais.
             </p>
         </div>
     </section>
-    <section id="movies">
-        <h2>Filmes</h2>
+    <section class="about">
+        <img src="src/images/Sam_Wilson.png" alt="HHHHH">
+        <div class="about__text_container">
+            <h3 class="title">Sam Wilson</h3>
+            <p class="text--big">
+                Sam Wilson nasceu em um bairro barra pesada, onde seu pai, um pastor, foi morto por tentar impedir uma
+                briga. Sam fez de tudo para continuar a ter decisôes sem ter que se envolver em maldades, mas sua
+                tristeza e raiva o levaram a se tornar um criminoso, chamado "Snap", quando trabalhava para máfia no
+                Harlem, Nova York, que depois agiria em Los Angeles. De volta de uma viagem ao Rio de Janeiro, onde
+                dizia ter encontrado seu mascote falcão Asa Vermelha, foi dominado pelo Caveira Vermelha, que o usou em
+                um de seus esquemas para enganar o Capitão América, o que acabou lhe dando poderes telepáticos com aves,
+                através do cubo cósmico. Muitos anos depois Sam se rebelaria contra o vilão e juntaria forças com o
+                Capitão para derrotá-lo.
+                <br>
+                <br>
+                Reconhecendo o potencial de Wilson, o Capitão acolheu-o como aprendiz e parceiro.
+            </p>
+        </div>
+    </section>
+
+    <section class="movies" id="movies">
+        <h2 class="title--big">Filmes</h2>
         <nav>
-            <button>
+            <button data-filme="primeiro" class="filme-btn active">
                 Capitão America: O Primeiro Vingador
             </button>
-            <button>
+            <button data-filme="soldado" class="filme-btn">
                 Capitão America 2: O Soldado Invernal
             </button>
-            <button>
+            <button data-filme="guerra" class="filme-btn">
                 Capitão America 3: Guerra Civil
             </button>
-            <button>
+            <button data-filme="mundo" class="filme-btn">
                 Capitão America 4: Admirável Mundo Novo
             </button>
         </nav>
-        <ul>
-            <li>
-                <img src="./src/images/Primeiro_Vingador.png" alt="Capa do filme Capitão America: O Primeiro Vingador">
-                <h3>Capitão America: O Primeiro Vingador</h3>
-                <p>
-                    <b>Sinopse:</b> <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non necessitatibus iste accusamus
-                    laudantium odit ex accusantium alias molestias at quos sequi eaque dicta eius temporibus labore
-                    atque, voluptates rerum.
-                </p>
-            </li>
-            <li>
-                <img src="./src/images/Soldado_Invernal.png" alt="Capa do filme Capitão America 2: O Soldado Invernal">
-                <h3>Capitão America 2: O Soldado Invernal</h3>
-                <p>
-                    <b>Sinopse:</b> <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non necessitatibus iste accusamus
-                    laudantium odit ex accusantium alias molestias at quos sequi eaque dicta eius temporibus labore
-                    atque, voluptates rerum.
-                </p>
-            </li>
-            <li>
-                <img src="./src/images/Civil_War.png" alt="Capa do filme Capitão America 3: Guerra Civil">
-                <h3>Capitão America 3: Guerra Civil</h3>
-                <p>
-                    <b>Sinopse:</b> <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non necessitatibus iste accusamus
-                    laudantium odit ex accusantium alias molestias at quos sequi eaque dicta eius temporibus labore
-                    atque, voluptates rerum.
-                </p>
-            </li>
-            <li>
-                <img src="./src/images/Admiravel_Mundo_Novo.png"
-                    alt="Capa do filme Capitão America 4: Admirável Mundo Novo">
-                <h3>Capitão America 4: Admirável Mundo Novo</h3>
-                <p>
-                    <b>Sinopse:</b> <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum non necessitatibus iste accusamus
-                    laudantium odit ex accusantium alias molestias at quos sequi eaque dicta eius temporibus labore
-                    atque, voluptates rerum.
-                </p>
-            </li>
-        </ul>
+
+        <div class="movies__submenu">
+            <nav>
+                <button class="submenu-btn submenu-active" data-tab="sobre">Sobre o Filme</button>
+                <button class="submenu-btn" data-tab="elenco">Elenco Principal</button>
+            </nav>
+        </div>
+
+        <div class="movies__conteudo movies__conteudo--active" data-filme="primeiro">
+            <div class="movies__conteudo__sobre">
+                <img src="src/images/Primeiro_Vingador.png" alt="Capa do filme">
+                <div class="movies__conteudo__sobre__text">
+                    <h3 class="title">Capitão America: O Primeiro Vingador</h3>
+                    <p class="text--big">
+                        2ª Guerra Mundial. Steve Rogers (Chris Evans) é um jovem que aceitou ser voluntário em
+                        uma
+                        série de experiências que visam criar o supersoldado americano. Os militares conseguem
+                        transformá-lo em uma arma humana, mas logo percebem que o supersoldado é valioso demais
+                        para
+                        pôr em risco na luta contra os nazistas. Desta forma, Rogers é usado como uma
+                        celebridade do
+                        exército, marcando presença em paradas realizadas pela Europa no intuito de levantar a
+                        estima dos combatentes. Para tanto passa a usar uma vestimenta com as cores da bandeira
+                        dos
+                        Estados Unidos, azul, branca e vermelha. Só que um plano nazista faz com que Rogers
+                        entre em
+                        ação e assuma a alcunha de Capitão América, usando seus dons para combatê-los em plenas
+                        trincheiras da guerra.
+                    </p>
+                </div>
+            </div>
+            <div class="movies__conteudo__elenco">
+                <ul class="movies__conteudo__elenco__list">
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Chris_Evans.png" alt="Chris Evans">
+                        <span class="text">Chris Evans</span>
+                        <span class="text">Steve Rogers</span>
+                        <span class="text">Capitão América</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Hayley_Atwell.png" alt="Hayley Atwell">
+                        <span class="text">Hayley Atwell</span>
+                        <span class="text">Peggy Carter</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Sebastian_Stan.png" alt="Sebastian Stan">
+                        <span class="text">Sebastian Stan</span>
+                        <span class="text">Bucky Barnes</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Samuel L. Jackson.png" alt="Samuel L. Jackson">
+                        <span class="text">Samuel L. Jackson</span>
+                        <span class="text">Nick Fury</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Hugo_Weaving.png" alt="Hugo Weaving">
+                        <span class="text">Hugo Weaving</span>
+                        <span class="text">Caveira Vermelha</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="movies__conteudo" data-filme="soldado">
+            <div class="movies__conteudo__sobre">
+                <img src="src/images/Soldado_Invernal.png" alt="Capa do filme">
+                <div class="movies__conteudo__sobre__text">
+                    <h3 class="title">Capitão America 2: O Soldado Invernal</h3>
+                    <p class="text--big">
+                        Dois anos após os acontecimentos em Nova York (Os Vingadores - The Avengers), Steve Rogers
+                        (Chris Evans) continua seu dedicado trabalho com a agência S.H.I.E.L.D. e também segue tentando
+                        se acostumar com o fato de que foi descongelado e acordou décadas depois de seu tempo. Em
+                        parceria com Natasha Romanoff (Scarlett Johansson), também conhecida como Viúva Negra, ele é
+                        obrigado a enfrentar um poderoso e misterioso inimigo chamado Soldado Invernal, que visita
+                        Washington e abala o dia a dia da S.H.I.E.L.D., ainda liderada por Nick Fury (Samuel L.
+                        Jackson).
+                    </p>
+                </div>
+            </div>
+            <div class="movies__conteudo__elenco">
+                <ul class="movies__conteudo__elenco__list">
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Chris_Evans.png" alt="Chris Evans">
+                        <span class="text">Chris Evans</span>
+                        <span class="text">Steve Rogers</span>
+                        <span class="text">Capitão América</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Anthony_Mackie.png" alt="Anthony Mackie">
+                        <span class="text">Anthony Mackie</span>
+                        <span class="text">Sam Wilson</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Sebastian_Stan.png" alt="Sebastian Stan">
+                        <span class="text">Sebastian Stan</span>
+                        <span class="text">Bucky Barnes</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Samuel L. Jackson.png" alt="Samuel L. Jackson">
+                        <span class="text">Samuel L. Jackson</span>
+                        <span class="text">Nick Fury</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Scarlett_Johansson.png" alt="Scarlett Johansson">
+                        <span class="text">Scarlett Johansson</span>
+                        <span class="text">Viúva Negra</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="movies__conteudo" data-filme="guerra">
+            <div class="movies__conteudo__sobre">
+                <img src="src/images/Civil_War.png" alt="Capa do filme">
+                <div class="movies__conteudo__sobre__text">
+                    <h3 class="title">Capitão America: Guerra Civil</h3>
+                    <p class="text--big">
+                        Em Capitão América: Guerra Civil, Steve Rogers (Chris Evans) é o atual líder dos Vingadores,
+                        super-grupo de heróis formado por Viúva Negra (Scarlett Johansson), Feiticeira Escarlate
+                        (Elizabeth Olsen), Visão (Paul Bettany), Falcão (Anthony Mackie) e Máquina de Combate (Don
+                        Cheadle). O ataque de Ultron fez com que os políticos buscassem algum meio de controlar os
+                        super-heróis, já que seus atos afetam toda a humanidade. Tal decisão coloca o Capitão América em
+                        rota de colisão com Tony Stark (Robert Downey Jr.), o Homem de Ferro.
+                    </p>
+                </div>
+            </div>
+            <div class="movies__conteudo__elenco">
+                <ul class="movies__conteudo__elenco__list">
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Chris_Evans.png" alt="Chris Evans">
+                        <span class="text">Chris Evans</span>
+                        <span class="text">Steve Rogers</span>
+                        <span class="text">Capitão América</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Anthony_Mackie.png" alt="Anthony Mackie">
+                        <span class="text">Anthony Mackie</span>
+                        <span class="text">Sam Wilson</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Sebastian_Stan.png" alt="Sebastian Stan">
+                        <span class="text">Sebastian Stan</span>
+                        <span class="text">Bucky Barnes</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Robert_Downey_Jr.png" alt="Robert Downey Jr.">
+                        <span class="text">Robert Downey Jr.</span>
+                        <span class="text">Tony Stark</span>
+                        <span class="text">Homem de Ferro</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Scarlett_Johansson.png" alt="Scarlett Johansson">
+                        <span class="text">Scarlett Johansson</span>
+                        <span class="text">Viúva Negra</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="movies__conteudo" data-filme="mundo">
+            <div class="movies__conteudo__sobre">
+                <img src="src/images/Admiravel_Mundo_Novo.png" alt="Capa do filme">
+                <div class="movies__conteudo__sobre__text">
+                    <h3 class="title">Capitão America: Admirável Mundo Novo</h3>
+                    <p class="text--big">
+                        Capitão América: Admirável Mundo Novo é o próximo filme do famoso herói da Marvel. Desta vez, o
+                        filme dá continuidade à minissérie de televisão Falcão e o Soldado Invernal, onde o escudo está
+                        nas mãos de Sam Wilson (Anthony Mackie), após Steve Rogers (Chris Evans) o entregar em
+                        Vingadores: Ultimato. Durante a série, Sam aceita seu dever como o novo Capitão América ao lado
+                        de Bucky Barnes (Sebastian Stan). Admirável Mundo Novo compõe a Fase Cinco do Universo
+                        Cinematográfico Marvel (UCM). O enredo promete explorar os desafios e responsabilidades de
+                        Wilson em seu novo papel, enquanto enfrenta novas ameaças e aliados inesperados. A direção está
+                        a cargo de Julius Onah, conhecido por seu trabalho em The Cloverfield Paradox, e o roteiro foi
+                        escrito por Malcolm Spellman, que também foi o showrunner de Falcão e o Soldado Invernal.
+                    </p>
+                </div>
+            </div>
+            <div class="movies__conteudo__elenco">
+                <ul class="movies__conteudo__elenco__list">
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Anthony_Mackie.png" alt="Anthony Mackie">
+                        <span class="text">Anthony Mackie</span>
+                        <span class="text">Sam Wilson</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Harrison_Ford.png" alt="Harrison Ford">
+                        <span class="text">Harrison Ford</span>
+                        <span class="text">Thunderbolt Ross</span>
+                    </li>
+                    <li class="movies__conteudo__elenco__list__item">
+                        <img src="./src/images/Shira_Haas.png" alt="Shira Haas">
+                        <span class="text">Shira Haas</span>
+                        <span class="text">Sabra</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
-    <section id="watch">
-        <h2>Onde assistir?</h2>
-        <p>
-            Disponível no Disney+
-        </p>
-        <a href="#">Assine agora</a>
+
+    <section class="watch" id="watch">
+        <img src="src/images/disneyplus.png" alt="Dinsey+">
+        <a class="btn text--big" href="https://www.disneyplus.com/" target="_blank">Ir para o Disney+</a>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="src/scripts/main.js"></script>
 </body>
 
 </html>

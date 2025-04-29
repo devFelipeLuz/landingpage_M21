@@ -1,0 +1,21 @@
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    img {
+        height: 600px;
+        width: 900px;
+        border-radius: 8px;
+    }
+
+    &__text_container {
+        padding: 0 2vw;
+
+        h3 {
+            margin-bottom: 24px;
+            border-bottom: 1px solid purple;
+            text-align: center;
+        }
+    }
+}

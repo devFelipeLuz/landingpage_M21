@@ -1,0 +1,119 @@
+@use 'variaveis';
+
+.movies {
+
+    h2 {
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    img {
+        height: 500px;
+        width: 300px;
+        border-radius: 8px;
+    }
+
+    button {
+        border: none;
+        padding: 8px 16px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        background-color: variaveis.$corFundo;
+        color: variaveis.$corTextoSecundario;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .active {
+        border-bottom: 3px solid purple;
+    }
+
+    .submenu-active {
+        background-color: purple;
+    }
+
+    &__submenu {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            width: 100%;
+            max-width: 1366px;
+            padding: 10px;
+            border: none;
+            background: none;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            text-transform: uppercase;
+            border-radius: 6px;
+
+            &:hover {
+                background-color: purple;
+            }
+        }
+    }
+
+    &__conteudo {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+
+        &__sobre {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__text {
+                padding: 0 2vw;
+
+                h3 {
+                    text-align: center;
+                    border-bottom: 1px solid purple;
+                }
+
+                p {
+                    max-width: 960px;
+                    margin-top: 12px;
+                }
+            }
+        }
+
+        &__elenco {
+            display: none;
+            padding-top: 16px;
+
+            &__list {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+
+                &__item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img {
+                        height: 180px;
+                        width: 120px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
